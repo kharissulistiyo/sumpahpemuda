@@ -1,0 +1,288 @@
+<!DOCTYPE html><html><head>
+    <!-- Webmaker metas -->
+    
+	<meta content="corkboard" name="webmaker:tags">
+
+<link href='https://fonts.googleapis.com/css?family=Neucha' rel='stylesheet' type='text/css'>
+    
+<!--
+
+Welcome, webmaker! 
+**********************
+
+        This is a split screen that shows a website (the moodboard on your right) and the code that puts it together (here on the left)! This part of the code, in black, is called 'Code Comments'. Code Comments are a secret way for designers to share tips with other designers in the back-end of a website. Because these comments begin and end with arrows, they're not processed with the rest of the code. We'll use them to explain the parts of this webpage as you browse it!
+
+
+What will I learn?
+**********************
+
+        - You'll learn how to 'edit' and 'publish' a website
+		- You'll learn how to save the unique URL for your work
+		- You'll be introduced to HTML - especially the tags for lists, quotes, images and paragraphs.
+        - You'll be introduced to CSS and its display functions, including rotation, positioning and img anchoring.
+        - You'll learn how to link image URLs to a webpage.
+
+
+        Tasks
+        ****************
+        TASK 1) Change the notes so that they have your own writing in them, and the pictures so that they have your own photos. 
+        TASK 2) Try removing the 'position:absolute' declartion from the .post-it-note and .polaroid class - see what that does.
+        TASK 3) Try making the yellow post it note be above the red post it note using z-index.
+        TASK 4) Move the blue post it not over the the left so its not being hidden by the polaroid.
+        TASK 5) Play around with the rotation of some of the items.
+
+
+Let's get started!
+***********************
+
+        The blue and red writing below is HTML. This is the skeleton of a website - the bones that, when put together, make up its body - each bone an editable piece of information called HTML. HTML is made up of tags that open and close like this <p> </p>, each used to personalise the magazine on your right! Confused about what a tag is for? Right-click on it to see an orange question mark that tells you more about what it does. 
+ -->
+
+    <title>Remix of Ideas Moodboard</title>
+
+    <!--
+      First, you'll want to give your new webpage a title. We've called our version "Ideas Moodboard" but you can make this better by editing what's in between the <title></title> HTML tag above on line 40. Try out a few until you find one you like!
+     -->
+    
+</head>
+<body>
+    
+    <!-- 
+        TASK 1) Try changing images and text.
+*********************************************************************
+Hi again! We're still in HTML here. The 'wrapper' in this project is acting as the moodboard itself. Try switching out some of the text below, image links and titles, to personalise your moodboard and make it your own. You can add new Post-Its and images too!
+    -->
+    <div class="wrapper">
+
+        <!-- Post it Note #1 -->
+        <div class="post-it-note yellow" id="note-1">
+             <div class="pin blue"></div>
+            
+          <h1><br/>Apa itu?</h1>
+            <p>Sumpah Pemuda adalah satu tonggak utama dalam sejarah pergerakan kemerdekaan Indonesia. Ikrar ini dianggap sebagai kristalisasi semangat untuk menegaskan cita-cita berdirinya negara Indonesia.
+          </p>
+        </div>
+
+        <!-- Post it Note #2 -->
+        <div class="post-it-note red" id="note-2">
+            <div class="pin yellow"></div>
+
+          <h1><br />Kapan?</h1>
+          <p>Yang dimaksud dengan "Sumpah Pemuda" adalah keputusan Kongres Pemuda Kedua yang diselenggarakan dua hari, 27-28 Oktober 1928 di Batavia (Jakarta).</p>
+        </div>
+
+        <!-- Post it Note #3 -->
+        <div class="post-it-note blue" id="note-3">
+            <div class="pin red"></div>
+
+          <h1><br />Isi Sumpah Pemuda</h1>
+          <p>Kami poetera dan poeteri Indonesia, mengakoe bertoempah darah jang satoe, tanah Indonesia.<br />
+Kedoewa
+            Kami poetera dan poeteri Indonesia, mengakoe berbangsa jang satoe, bangsa Indonesia. <br />
+Ketiga
+Kami poetera dan poeteri Indonesia, mendjoendjoeng bahasa persatoean, bahasa Indonesia.</p>
+        </div>
+
+         <!-- Polaroid #1 -->
+        <figure class="polaroid" id="picture-1">
+            <div class="pin red"></div>
+          <a href="http://www.flickr.com/photos/mozillaindia/8539212053/in/faves-mozilladrumbeat/">
+            <img alt="My Holiday" src="http://upload.wikimedia.org/wikipedia/id/7/7a/Kongrespemuda2.jpg"></a>
+            <figcaption>Peserta Kongres Pemuda II</figcaption>
+ 
+        </figure>
+
+         <!-- Polaroid #2 -->
+        <figure class="polaroid" id="picture-2">
+            <div class="pin blue"></div>
+          <p></p>
+          <p></p>
+          <p>Sumber: <a href="http://id.wikipedia.org/wiki/Sumpah_Pemuda">Wikipedia</a></p>
+          <p>Dibuat dengan <a href="http://webmaker.org">Webmaker</a>.</p>
+          <p>Remix dari <a href="https://keyboardkat.makes.org/thimble/ideas-mood-board">Ideas Mood Board</a></p>
+          <p>Oleh <a href="https://twitter.com/kharissulistiyo">@kharissulistiyo</a></p>
+        </figure>
+
+    </div>
+  
+    <style media="screen">
+      
+        
+        * {
+            -webkit-box-sizing:border-box;
+            -moz-box-sizing:border-box;
+            -ms-box-sizing:border-box;
+            box-sizing:border-box;
+        }
+        html {
+            height:100%;
+        }
+        body {
+            height:100%;
+            padding:20px;
+            margin:0px;
+            background-color:#e9e9e9;
+            background-image: url("http://farm9.staticflickr.com/8197/8180645274_2185513125_h.jpg");
+            background-repeat: repeat;
+            color:black;
+        }
+      
+       /* Background post-its photo thanks to Sean Bonner via Mozilla's Drumbeat Flickr: http://flic.kr/p/dsTWQb
+       */
+      
+         .wrapper {
+            position:relative;
+            width:700px;
+            height:900px;
+            border:15px solid #130d02;
+            margin:0 auto;
+            background-color:#ad6908;
+            background-image: url('http://farm4.staticflickr.com/3581/3320074408_e929e99c5d_b.jpg');
+            background-repeat: repeat;
+            box-shadow: 5px 5px 5px rgba(0,0,0,.4);
+        }
+          /*
+            TASK 2) Change position of CSS elements.         *********************************************************************
+            Hey again! We're now in CSS. You'll see below how all the elements stack up together. Right now, changing their left, top, right or bottom values further down will have no effect. If you change the below to position-relative, all the elements will move around relative to each other. But with position absolute CSS, each item is on its own layer and isnt affected by other things. Make sure you change back to 'position: absolute;' afterwards.
+        */
+         .post-it-note,
+         .polaroid {
+            position: absolute;
+            box-shadow: 3px 3px 2px rgba(0,0,0,.4);
+         }
+
+        /* Basic styles for the post it note*/
+         .post-it-note {
+            width:230px;
+             height:230px;
+             padding:20px;
+             font-family:'Neucha', serif;
+             background-color:#e8dd62;
+             background: -webkit-linear-gradient(135deg, #efdd64 0%, #efdd64 70%, #fcf8d6 100%); /* Safari/Chrome */
+             background: -moz-linear-gradient(135deg, #efdd64 0%, #efdd64 70%, #fcf8d6 100%); /*  Old Firefox */
+             background: -o-linear-gradient(135deg, #efdd64 0%, #efdd64 70%, #fcf8d6 100%); /* Opera */
+             background: -ms-linear-gradient(135deg, #efdd64 0%, #efdd64 70%, #fcf8d6 100%); /* IE 9 */
+             background: linear-gradient(135deg, #efdd64 0%, #efdd64 70%, #fcf8d6 100%);
+         }
+         /* Colour classes for the post it notes */
+         .yellow {
+            background-color:#e8dd62;
+             background: -webkit-linear-gradient(135deg, #efdd64 0%, #efdd64 70%, #fcf8d6 100%); /* Safari/Chrome */
+             background: -moz-linear-gradient(135deg, #efdd64 0%, #efdd64 70%, #fcf8d6 100%); /* Old Firefox */
+             background: -o-linear-gradient(135deg, #efdd64 0%, #efdd64 70%, #fcf8d6 100%); /* Opera */
+             background: -ms-linear-gradient(135deg, #efdd64 0%, #efdd64 70%, #fcf8d6 100%); /* IE 9 */
+             background: linear-gradient(135deg, #efdd64 0%, #efdd64 70%, #fcf8d6 100%); 
+         }
+         .red {
+            background-color:#d23838;
+             background: -webkit-linear-gradient(135deg, #d73333 0%, #d73333 70%, #ee5050 100%); /* Safari/Chrome */
+             background: -moz-linear-gradient(135deg, #d73333 0%, #d73333 70%, #ee5050 100%); /* Old Firefox */
+             background: -o-linear-gradient(135deg, #d73333 0%, #d73333 70%, #ee5050 100%); /* Opera */
+             background: -ms-linear-gradient(135deg, #d73333 0%, #d73333 70%, #ee5050 100%); /* IE 9 */
+             background: linear-gradient(135deg, #d73333 0%, #d73333 70%, #ee5050 100%); 
+         }
+         .blue {
+            background-color:#5c97ee;
+             background: -webkit-linear-gradient(135deg, #608cce 0%, #608cce 70%, #77a0de 100%); /* Safari/Chrome */
+             background: -moz-linear-gradient(135deg, #608cce 0%, #608cce 70%, #77a0de 100%); /*  Old Firefox */
+             background: -o-linear-gradient(135deg, #608cce 0%, #608cce 70%, #77a0de 100%); /* Opera */
+             background: -ms-linear-gradient(135deg, #608cce 0%, #608cce 70%, #77a0de 100%); /*  IE 9 */
+             background: linear-gradient(135deg, #608cce 0%, #608cce 70%, #77a0de 100%); 
+         }
+
+        /* Font styling for headings and text inside the post it notes */
+         p, h1, h2, h3, h4, h5 {
+            margin-top:0;
+         }
+         h1 {
+            font-size:20px;
+         }
+         p {
+            font-size: 16px;
+         }
+
+         /* Each <figure> will ask as a polaroid so we can just style the <figure> without a class name */
+         .polaroid {
+            padding:10px;
+             margin:0;
+             background:white;
+             display: inline-block;
+         }
+         .polaroid img {
+            max-width:250px;
+         }
+         .polaroid figcaption {
+            font-family:'Neucha', sans-serif;
+         }
+         /* The drawing pins (can use the same colour classes above) */
+         .pin {
+            width:20px;
+             height:20px;
+             position: absolute;
+             top:10px;
+             left:10px;
+             -webkit-box-shadow: 2px 2px 2px rgba(0,0,0,.3); /* Make it work in Safari/Chrome */
+             box-shadow: 2px 2px 2px rgba(0,0,0,.3);
+             border-radius: 20px;
+         }
+         
+         /*
+            Task 2) Make the yellow post it note be above the red post it note using z-index.        ************************************************************************
+            As mentioned in Task 1) each item that has position:absolute effectively has its own 'layer' which means you can change the order of the layer so something sits 'on top' of another layer. Look at the yellow and red post it notes.  The red is on top.  
+            - Try adding z-index:1; to  #note-1
+            - Add z-index: 0; to #note-2.
+            See the difference in the layer order?
+        */
+
+         #note-1 {
+            top:2%;
+            left:35%;
+         }
+         #note-2 {
+            top: 20%;
+            right:2%;
+         }
+         /*
+            TASK 3) Move the blue post it not over the the left so it's not being hidden by the polaroid.
+************************************************************************
+            #note-3 is the id on the blue poloaroid.  You can see that its positions 10% off the bottom and 16% from the left. The 10% and 16% are refering the the width and height of the container #note-3 sites in which is the .wrapper (cork board). So of you wanted to move the post it note closer to the left try reducing the left % to say 10%.
+        */
+         #note-3 {
+            bottom: 10%;
+            left: 16%;
+        height:320px;
+            transform:rotate(2deg);
+            -ms-transform:rotate(2deg); /* Make it work in IE 9 */
+            -webkit-transform:rotate(2deg); /* Make it work in Safari and Chrome */
+         }
+         #picture-1 {
+            left: 3%;
+            top: 30%;
+            transform:rotate(2deg);
+            -ms-transform:rotate(2deg); /* Make it work in IE 9 */
+            -webkit-transform:rotate(2deg); /*  Make it work in Safari */
+         }
+
+         /*
+            TASK 4) Play around with the rotation of some of the items!   **********************************************************************
+            If you notice some of the items on the corkbord a rotated slightly. The transform css property is doing this (we've added some browser specific rotations as well to make sure you see it woking in more browsers). Try changing the values of the rotation to see the effect on the corkboard.
+        */
+
+         #picture-2 {
+            bottom: 10%;
+            right:10%;
+            transform:rotate(-3deg);
+            -ms-transform:rotate(-3deg); /* Make it work in IE 9 */
+            -webkit-transform:rotate(-3deg); /* Make it work in Safari and Chrome */
+         }
+
+      /*
+      You've now survived the more complicated CSS bit of this website - congrats! Don't forget to publish - get your own unique URL to share + come back and edit later by logging in on the top right above (a quick 1 min process) and hitting "Publish". It's high time you patted yourself on the back for a job well done! 
+       */
+      
+      
+    </style>
+    
+
+
+</body></html>
